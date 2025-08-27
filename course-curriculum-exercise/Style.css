@@ -1,0 +1,212 @@
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+
+ /* =========
+   DOCUMENT
+   ========= */
+:root{
+  --page-max: 820px;        /* comfy reading width */
+  --text: #0f172a;          /* slate-900 */
+  --muted: #475569;         /* slate-600 */
+  --soft: #e2e8f0;          /* slate-200 */
+  --soft-2: #f1f5f9;        /* slate-100 */
+  --brand: #0b57d0;         /* nice blue accent (links) */
+}
+
+html, body {
+  background: #fff;
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 16px;
+}
+
+body {
+  max-width: var(--page-max);
+  margin-inline: auto;
+  padding: 24px 20px 64px;
+}
+
+/* =========
+   HEADINGS
+   ========= */
+h1 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  margin: 0 0 14px;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  margin: 28px 0 10px;
+}
+
+h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 4px 0 12px;
+}
+
+/* Paragraphs & small notes */
+p {
+  margin: 10px 0 14px;
+}
+p small { color: var(--muted); }
+
+/* Links */
+a { color: var(--brand); }
+
+/* =======
+   TABLES
+   ======= */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  margin: 12px 0 20px;
+  border: 1px solid var(--soft);
+  background: #fff;
+}
+
+/* Caption must be first child in <table> — we style it like a bar title */
+caption {
+  caption-side: top;              /* keep it above the table */
+  text-align: left;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+  padding: 12px 12px;
+  border-bottom: 1px solid var(--soft);
+  background: var(--soft-2);
+}
+
+/* Cells */
+th, td {
+  padding: 10px 12px;
+  vertical-align: top;
+  border-bottom: 1px solid var(--soft);
+}
+
+/* Row header on the left */
+th[scope="row"] {
+  width: 38%;
+  font-weight: 700;
+  text-align: left;
+  background: #fafcff;
+}
+
+/* Value cell */
+td {
+  width: 62%;
+}
+
+/* Subtle zebra striping for readability */
+tbody tr:nth-child(even) td {
+  background: #fcfcfd;
+}
+
+/* Tighten last row border */
+tbody tr:last-child th,
+tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+/* =========
+   UTILITIES
+   ========= */
+hr { border: 0; border-top: 1px solid var(--soft); margin: 24px 0; }
+.center { text-align: center; }
+.right { text-align: right; }
+
+/* ======
+   PRINT
+   ====== */
+@media print {
+  body {
+    max-width: none;
+    margin: 0.5in;
+    padding: 0;
+  }
+  a { color: inherit; text-decoration: none; }
+  table { page-break-inside: avoid; }
+}
