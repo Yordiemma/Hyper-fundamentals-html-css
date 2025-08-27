@@ -3,55 +3,74 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
     <!--Fonts go here -->
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&family=Poppins:wght@400;600&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Fovicon -->
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+
+    <!-- Style -->
     <link rel="stylesheet" href="./style.css" />
     <title>
       Frontend Mentor | Huddle landing page with single introductory section
     </title>
   </head>
+
   <body>
-    <header>
-      <img src="./images/logo.svg" alt="Huddle logo" />
+    <!--header go here-->
+    <header class="header">
+      <img class="logo" src="./images/logo.svg" alt="Huddle logo" />
     </header>
-    <h1>Build The Community Your Fans Will Love</h1>
-    <p>
-      Huddle re-imagines the way we build communities. You have a voice, but so
-      does your audience. Create connections with your users as you engage in
-      genuine discussion.
-    </p>
-    <button>Register</button>
+
+    <!--Hero section-->
+    <main>
+      <section class="hero">
+        <img class="hero-img" src="./images/illustration-mockups.svg" alt="" />
+        <div class="hero-content">
+          <h1 class="hero-title">Build The Community Your Fans Will Love</h1>
+          <p class="hero-text">
+            Huddle re-imagines the way we build communities. You have a voice,
+            but so does your audience. Create connections with your users as you
+            engage in genuine discussion.
+          </p>
+          <button type="button" class="btn">Register</button>
+        </div>
+      </section>
+    </main>
+
     <!--footer can go here-->
-    <footer>
-      <ul>
+    <footer class="footer">
+      <ul class="social">
         <li>
-          <img src="./images/facebook.svg" alt="Facebook icon" />
+          <img class="social-icon" src="./images/facebook.svg" alt="Facebook" />
         </li>
         <li>
-          <img src="./images/twitter-.svg" alt="twitter icon" />
+          <img class="social-icon" src="./images/twitter.svg" alt="Twitter" />
         </li>
         <li>
-          <img src="./images/instagram.svg" alt="Facebook icon" />
+          <img
+            class="social-icon"
+            src="./images/instagram.svg"
+            alt="Instagram"
+          />
         </li>
       </ul>
 
-      <p class="attribution">
+      <!-- <p class="attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
         >. Coded by <a href="#">Yordanos A.</a>.
-      </p>
+      </p> -->
     </footer>
   </body>
 </html>

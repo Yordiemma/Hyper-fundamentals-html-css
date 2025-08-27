@@ -1,5 +1,265 @@
-.attribution a { color: hsl(228, 45%, 44%); }
-body{
-background-color:  hsl(257, 40%, 49%);
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+    text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+    scroll-margin-block: 5ex;
+}
+
+/* The style start here */
+/* Variables & Reset*/
+:root {
+    --purple-700: hsl(257, 40%, 49%);
+    --magenta-400: hsl(300, 69%, 71%);
+    --text: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    color: var(--text);
+    line-height: 1.6;
+
+    /* Purple background + decorative background image */
+    background-color: var(--purple-700);
+    background-image: url("./images/bg-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top left;
+}
+
+/* Swap to desktop background  */
+@media (min-width: 900px) {
+    body {
+        background-image: url("./images/bg-desktop.svg");
+        background-size: contain;
+    }
+}
+
+/* Layout widths*/
+.header,
+.hero,
+.footer {
+    max-width: 1120px;
+    margin-inline: auto;
+    padding-inline: 24px;
+}
+
+ /* Header */
+.header {
+    padding-block: 32px 24px;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+@media (min-width: 900px) {
+    .logo {
+        width: 210px;
+    }
+}
+
+
+/* Hero section*/
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    padding-block: 20px 32px;
+}
+
+.hero-img {
+    width: 100%;
+    max-width: 640px;
+    height: auto;
+}
+
+.hero-content {
+    max-width: 520px;
+    text-align: center;
+}
+
+.hero-title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+ font-size: 25.5px;
+    line-height: 1.2;
+    margin-bottom: 14px;
+}
+
+.hero-text {
+    opacity: 0.95;
+    margin-bottom: 22px;
+}
+
+/*  button */
+.btn {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    padding: 14px 40px;
+    border: 0;
+    border-radius: 999px;
+    background: #ffffff;
+    color: var(--purple-700);
+    box-shadow:  20px rgba(0, 0, 0, .2);
+    cursor: pointer;
+
+}
+
+.btn:hover,
+.btn:focus-visible {
+    background: var(--magenta-400);
+    color: #ffffff;
+    transform: translateY(-1px);
+    outline: none;
+}
+
+/* Desktop: image left, content right */
+@media (min-width: 900px) {
+    .hero {
+        flex-direction: row;
+        align-items: center;
+        gap: 60px;
+    }
+
+    .hero-img {
+        flex: 1 1 55%;
+        max-width: none;
+    }
+
+    .hero-content {
+        flex: 1 1 45%;
+        text-align: left;
+    }
+}
+ /* Footer  */
+.footer {
+    padding-block: 24px 32px;
+}
+
+.social {
+    list-style: none;
+    display: flex;
+    gap: 14px;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+
+}
+
+@media (min-width: 900px) {
+    .social {
+        justify-content: flex-end;
+    }
+
+
+}
+
+
+
+
+/* Icon images */
+.social-icon,
+.social li img {
+    width: 20px;
+    height: 20px;
+    display: block;
+
+    
 }
