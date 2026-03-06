@@ -1,0 +1,14 @@
+body{
+  background-color: rgb(14, 29, 29);
+  text-align: center;
+}
+.Wrapper{
+border: #0084ff 2px double;
+width: 75%;
+margin: 20px auto 20px auto;
+padding: 20px;
+}
+h1{
+  color: aliceblue;
+  text-decoration: underline;
+}

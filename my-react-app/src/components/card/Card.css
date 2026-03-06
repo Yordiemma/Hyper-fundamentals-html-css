@@ -1,0 +1,25 @@
+.container {
+    
+    border: 2px solid black;
+    border-radius: 15px;
+    margin-top: 10px auto;
+    padding: 5px;
+    font-size: 24px;
+    font-weight: bolder;
+}
+h3{
+    text-align: center;
+    text-decoration: underline;
+}
+
+.firstColor{
+    background-color: chocolate;
+}
+
+.secondColor{
+    background-color: rgb(230, 220, 79);
+}
+
+.thirdColor{
+    background-color: rgb(30, 153, 210);
+}
