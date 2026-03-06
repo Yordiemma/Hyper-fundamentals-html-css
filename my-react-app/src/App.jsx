@@ -9,9 +9,9 @@ const websit = "www.automarket.se"
       <h1>Businesss Card App</h1>
       <div className='Wrapper'>
         <h1 className='center'>1. Repliceting components</h1>
-        <Card name="Alexander" email="alexander@automarket.se" websit="www.automarket.se" />
-        <Card name="Emma" email="Emma@automarket.se" websit= { websit } />
-        <Card name="Yordanos" email="Emma@automarket.se" websit= { websit }/>
+        <Card name="Alexander" email="alexander@automarket.se" websit="www.automarket.se"  color="firstColor"/>
+        <Card name="Emma" email="Emma@automarket.se" websit= { websit } color="secondColor"/>
+        <Card name="Yordanos" email="Emma@automarket.se" websit= { websit } color="thirdColor"/>
         
       </div>
     </>
