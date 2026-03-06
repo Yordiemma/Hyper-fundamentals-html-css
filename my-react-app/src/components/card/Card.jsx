@@ -6,9 +6,9 @@ export default class Card extends Component {
       
             <div className='container firstColor'>
                 <h3>AutoMarket</h3>
-                <p>Name: Alexander</p>
-                <p>Email: alexander@automarket.se </p>
-                <p>Websit: www.automarket.se</p>
+            <p>Name: { this.props.name}</p>
+            <p>Email: {this.props.email} </p>
+            <p>Websit: {this.props.websit}</p>
 
             </div>   
             
